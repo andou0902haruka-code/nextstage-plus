@@ -152,6 +152,10 @@ footer{font-size:12px;color:var(--sub);text-align:center;margin-top:24px}
 .q-stem{font-size:18px;line-height:2.2;font-family:Georgia,"Times New Roman",serif}
 .q-stem input{font:inherit;font-size:16px;width:7.2em;padding:2px 8px;margin:0 3px;border:none;
   border-bottom:2px solid var(--blue);background:var(--blue-soft);color:var(--ink);border-radius:4px 4px 0 0;text-align:center}
+.q-stem input.wide{width:11em}
+@media(max-width:520px){.q-stem input.wide{width:100%;max-width:15em}}
+.jp{border-bottom:2.5px solid var(--accent);padding-bottom:1px;color:var(--accent)}
+.qno.ex{color:var(--accent);border-color:var(--accent);font-size:16px}
 .q-stem input.ok{border-color:var(--ok);background:color-mix(in srgb,var(--ok) 14%,transparent)}
 .q-stem input.ng{border-color:var(--ng);background:color-mix(in srgb,var(--ng) 12%,transparent)}
 .slotline{display:inline;border-bottom:2px dashed var(--blue);padding:0 4px;min-width:5em}
@@ -545,12 +549,13 @@ footer{font-size:12px;color:var(--sub);text-align:center;margin-top:24px}
 <script src="https://www.gstatic.com/firebasejs/10.14.1/firebase-firestore-compat.js"></script>
 <script>
 const DATA = {"book":"Next Stage 英文法・語法問題（+a）","points":{"010":{"chapter":"第1章 時制","title":"未来を表す be going to do / be about to do の用法"},"011":{"chapter":"第1章 時制","title":"「Sが…してから〜になる」の表現","seiri":{"name":"整理3「Sが…してから〜になる」の表現","lead":"以下はほぼ同じ意味の表現として押さえておこう。","rows":["(1) 時間(〜)＋have passed since S＋過去時制…","(2) It has been [is]＋時間(〜)＋since S＋過去時制…","(3) S＋過去時制…＋時間(〜)＋ago."]}}},"items":[{"id":"027","no":27,"sub":"","point":"010","type":"order","ja":"私たちが立ち去ろうとすると、ちょうどマシューがあいさつしてきた。","pre":"We were","post":"hello.","words":["about","Matthew","said","leave","to","when"],"answer":"about to leave when Matthew said","full":"We were about to leave when Matthew said hello.","from":"成蹊大","ansSrc":"推定","expl":{"head":"be about to do「まさに…するところだ」","tags":["読解","標準"],"body":["文構造どおりに訳すと「マシューがあいさつしてきたとき、私たちは立ち去ろうとするところだった」となるが、「be about to do＋when節」は本問のように主節から訳される場合が多い。"]}},{"id":"028a","no":28,"sub":"a","point":"011","type":"fill","ja":"私の母が亡くなってから10年になります。","stem":"Ten years ___ ___ ___ my mother died.","blanks":[["have"],["passed"],["since"]],"full":"Ten years have passed since my mother died.","from":"福井工大","ansSrc":"推定","expl":{"head":"「Sが…してから〜になる」の書きかえパターン","tags":["英作","標準"],"body":["(a)〜(c)は上記の【整理3】の(1)〜(3)を完成させればよい。","(d)の have been dead for A「死んでAの期間になる←死んだ状態がAの期間続いている」は、現在完了で継続を表す用法。英語独特の表現として押さえておこう。本問は My mother が主語なので has been dead となる。"]}},{"id":"028b","no":28,"sub":"b","point":"011","type":"fill","ja":"私の母が亡くなってから10年になります。","stem":"It ___ ___ ten years ___ my mother died.","blanks":[["has"],["been"],["since"]],"full":"It has been ten years since my mother died.","from":"福井工大","ansSrc":"推定","expl":{"head":"「Sが…してから〜になる」の書きかえパターン","tags":["英作","標準"],"body":["(a)〜(c)は上記の【整理3】の(1)〜(3)を完成させればよい。","(d)の have been dead for A「死んでAの期間になる←死んだ状態がAの期間続いている」は、現在完了で継続を表す用法。英語独特の表現として押さえておこう。本問は My mother が主語なので has been dead となる。"]}},{"id":"028c","no":28,"sub":"c","point":"011","type":"fill","ja":"私の母が亡くなってから10年になります。","stem":"My mother ___ ten years ___ .","blanks":[["died"],["ago"]],"full":"My mother died ten years ago.","from":"福井工大","ansSrc":"推定","expl":{"head":"「Sが…してから〜になる」の書きかえパターン","tags":["英作","標準"],"body":["(a)〜(c)は上記の【整理3】の(1)〜(3)を完成させればよい。","(d)の have been dead for A「死んでAの期間になる←死んだ状態がAの期間続いている」は、現在完了で継続を表す用法。英語独特の表現として押さえておこう。本問は My mother が主語なので has been dead となる。"]}},{"id":"028d","no":28,"sub":"d","point":"011","type":"fill","ja":"私の母が亡くなってから10年になります。","stem":"My mother ___ ___ ___ for ten years.","blanks":[["has"],["been"],["dead"]],"full":"My mother has been dead for ten years.","from":"福井工大","ansSrc":"推定","expl":{"head":"「Sが…してから〜になる」の書きかえパターン","tags":["英作","標準"],"body":["(a)〜(c)は上記の【整理3】の(1)〜(3)を完成させればよい。","(d)の have been dead for A「死んでAの期間になる←死んだ状態がAの期間続いている」は、現在完了で継続を表す用法。英語独特の表現として押さえておこう。本問は My mother が主語なので has been dead となる。"]}},{"id":"029","no":29,"sub":"","point":"011","type":"order","ja":"本格的な休暇をとって3年になる。","pre":"It's","post":".","words":["a","had","I","real","since","three","vacation","years"],"answer":"three years since I had a real vacation","full":"It's three years since I had a real vacation.","from":"中部大","ansSrc":"推定","expl":{"head":"It is＋時間＋since S＋過去時制…","tags":["英作","標準"],"body":["【整理3】の(2)のパターンを使って英文を完成させる。"]}}]};
-const BUILD = { id:'b36ac9f4ea56', at:'2026-10-06 13:05' };
+const BUILD = { id:'29b6c23f16f5', at:'2026-10-06 13:44' };
 const ALL = DATA.items;        // 問題（形式 type = choice / order / fill / write）
 const POINTS = DATA.points;    // Point番号 → {chapter,title,seiri?}
 const BY_ID = {};
 ALL.forEach(i => { BY_ID[i.id] = i; });
-const TYPE_LABEL = { choice:'4択', order:'並べかえ', fill:'空所補充', write:'英作文' };
+const TYPE_LABEL = { choice:'4択', order:'並べかえ', fill:'空所補充', part:'部分英訳', write:'英作文' };
+const isBlankType = t => t === 'fill' || t === 'part';   // 空所に書き込む形式（部分英訳は空所が句になる）
 
 /* ============ 保存 ============ */
 function hasStorage(){ try{ localStorage.setItem('__t','1'); localStorage.removeItem('__t'); return true; }catch(e){ return false; } }
@@ -634,7 +639,8 @@ const HS_ENV = {
   }
 };
 function histKind(it){ return 'Point ' + it.point + '｜' + (TYPE_LABEL[it.type] || ''); }
-function qLabel(it){ return it.no + (it.sub ? '(' + it.sub + ')' : ''); }
+/* 解説の写真の例文から作った問題（src=expl）は「例 28-1」、本の問題は「28(a)」 */
+function qLabel(it){ return it.src === 'expl' ? '例 ' + it.no + '-' + String(it.sub).replace(/^x/, '') : it.no + (it.sub ? '(' + it.sub + ')' : ''); }
 /* MOTIV:JS:BEGIN */
 /* ============================================================
    やる気の仕掛け — 中身（連続日数＋12週カレンダー／レベル＆XP／バッジ12種）
@@ -1310,6 +1316,13 @@ function norm(s){
 }
 const pointName = p => POINTS[p] ? `Point ${p}｜${POINTS[p].title}` : `Point ${p}`;
 
+/* 日本語文。部分英訳は、英語にする部分（jaPart）に下線を引く */
+function jaHtml(it){
+  const ja = it.ja || '', p = it.jaPart;
+  const i = p ? ja.indexOf(p) : -1;
+  if(i < 0) return esc(ja);
+  return esc(ja.slice(0, i)) + `<span class="jp">${esc(p)}</span>` + esc(ja.slice(i + p.length));
+}
 /* 本の「□□□」と同じ：直近3回の出来を ○ △ × で出す */
 function chkHtml(id){
   const h = ((srs[id] && srs[id].h) || []).slice(-3);
@@ -1324,7 +1337,7 @@ function chkHtml(id){
 /* 正解の英文（答えの部分を太字にする） */
 function answerHtml(it){
   if(it.type === 'order') return `${esc(it.pre)} <b>${esc(it.answer)}</b> ${esc(it.post)}`.replace(/ (<\/b>)? ?\.$/, '$1.');
-  if(it.type === 'fill'){
+  if(isBlankType(it.type)){
     let k = 0;
     return esc(it.stem).replace(/___/g, () => `<b>${esc(it.blanks[k++][0])}</b>`).replace(/ \./g, '.');
   }
@@ -1553,7 +1566,8 @@ function show(){
   document.getElementById('p-no').textContent = qLabel(cur);
   document.getElementById('p-chk').innerHTML = chkHtml(cur.id);
   document.getElementById('p-point').textContent = `${pointName(cur.point)} ／ ${TYPE_LABEL[cur.type]}`;
-  document.getElementById('p-ja').textContent = cur.ja || '';
+  document.getElementById('p-ja').innerHTML = jaHtml(cur);
+  document.getElementById('p-no').className = 'qno' + (cur.src === 'expl' ? ' ex' : '');
   renderStar();
   document.getElementById('p-before').classList.remove('hidden');
   document.getElementById('p-after').classList.add('hidden');
@@ -1570,10 +1584,10 @@ function renderStar(){
 function renderBody(){
   const el = document.getElementById('p-body'), it = cur;
   document.getElementById('p-clear').classList.toggle('hidden', it.type === 'write' || it.type === 'choice');
-  if(it.type === 'fill'){
+  if(isBlankType(it.type)){
     let k = 0;
     el.innerHTML = `<div class="q-stem">${esc(it.stem).replace(/___/g, () =>
-      `<input data-k="${k++}" autocomplete="off" autocapitalize="off" spellcheck="false" enterkeyhint="next">`)}</div>`;
+      `<input data-k="${k++}"${it.type === 'part' ? ' class="wide"' : ''} autocomplete="off" autocapitalize="off" spellcheck="false" enterkeyhint="next">`)}</div>`;
     const ins = el.querySelectorAll('input');
     ins.forEach((inp, i) => inp.addEventListener('keydown', e => {
       if(e.key === 'Enter'){ e.preventDefault(); if(ins[i+1]) ins[i+1].focus(); else submitAnswer(); }
@@ -1609,13 +1623,13 @@ function choose(n){ if(revealed) return; chosen = (chosen === n ? 0 : n); render
 function clearAnswer(){
   if(revealed) return;
   if(cur.type === 'order'){ built = []; renderOrder(); }
-  if(cur.type === 'fill') document.querySelectorAll('#p-body input').forEach(i => i.value = '');
+  if(isBlankType(cur.type)) document.querySelectorAll('#p-body input').forEach(i => i.value = '');
 }
 
 /* 自分の答えと、正解との照らし合わせ（参考表示）。match=全部一致 */
 function checkAnswer(){
   const it = cur;
-  if(it.type === 'fill'){
+  if(isBlankType(it.type)){
     const ins = Array.from(document.querySelectorAll('#p-body input'));
     const vals = ins.map(i => i.value.trim());
     const okEach = vals.map((v, k) => !!v && it.blanks[k].some(a => norm(a) === norm(v)));
